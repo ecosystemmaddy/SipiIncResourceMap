@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="./resources/ol.css">
+        <link rel="stylesheet" href="resources/fontawesome-all.min.css">
+        <link href="resources/photon-geocoder-autocomplete.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
+        <link rel="stylesheet" href="./resources/qgis2web.css">
+        <style>
+        html, body {
+            background-color: #9acbd3;
+        }
+        .ol-control > * {
+            background-color: #f8f8f8!important;
+            color: #444444!important;
+            border-radius: 0px;
+        }
+        .ol-attribution a, .gcd-gl-input::placeholder, .search-layer-input-search::placeholder {
+            color: #444444!important;
+        }
+        .search-layer-input-search {
+            background-color: #f8f8f8!important;
+        }
+        .ol-control > *:focus, .ol-control >*:hover {
+            background-color: rgba(248, 248, 248, 0.7)!important;
+        } 
+        .ol-control {
+            background-color: rgba(255,255,255,.4) !important;
+            padding: 2px !important;
+        } 
+        </style>
+
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title>Sipi Resource Map</title>
+    </head>
+    <body>
+        <div id="map">
+            <div id="popup" class="ol-popup">
+                <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                <div id="popup-content"></div>
+            </div>
+        </div>
+        <script src="resources/qgis2web_expressions.js"></script>
+        <script src="./resources/functions.js"></script>
+        <script src="./resources/ol.js"></script>
+        <script src="./resources/ol-layerswitcher.js"></script>
+        <script src="resources/photon-geocoder-autocomplete.min.js"></script>
+        <script src="layers/VacantLots_1.js"></script><script src="layers/TotalDisabledPopulationNoninstitutionalizedAnydisability_2.js"></script><script src="layers/PopulationwCognitiveDisabilityNoninstitutionalized_3.js"></script><script src="layers/SNAPCashAssistancePop_4.js"></script><script src="layers/PovertyPop_5.js"></script><script src="layers/Populationover60_6.js"></script><script src="layers/NoVehicleinHouseHold_7.js"></script><script src="layers/MedianAge_8.js"></script><script src="layers/LOTESpokenatHome_9.js"></script><script src="layers/HouseholdsWChildrenUnder18_10.js"></script><script src="layers/Employment_11.js"></script><script src="layers/BlackPop_12.js"></script><script src="layers/RoadsGC_13.js"></script><script src="layers/YouthSupport_14.js"></script><script src="layers/WaterTestingCenters_15.js"></script><script src="layers/SocialandCommunityDevelopmentServices_16.js"></script><script src="layers/SmallBusinessNonProfitSupport_17.js"></script><script src="layers/SexualandReproductiveHealthCenters_18.js"></script><script src="layers/SeniorCenters_19.js"></script><script src="layers/RecoveryCenters_20.js"></script><script src="layers/MentalHealthServices_21.js"></script><script src="layers/IncarcerationSupport_22.js"></script><script src="layers/LGBTQSupport_23.js"></script><script src="layers/LanguageLiteracyAdultEducationCenters_24.js"></script><script src="layers/PastSIPIPartners_25.js"></script><script src="layers/SIPIPartners_26.js"></script><script src="layers/HousingDevelopmentServices_27.js"></script><script src="layers/HomelessnessSupport_28.js"></script><script src="layers/HealthIntermediaries_29.js"></script><script src="layers/FoodAccessPoints_30.js"></script><script src="layers/FamilySupport_31.js"></script><script src="layers/Ecosystem_32.js"></script><script src="layers/DrugTestingCenters_33.js"></script><script src="layers/DomesticAbuseSupport_34.js"></script><script src="layers/CulturalCenters_35.js"></script><script src="layers/CommunityGardens_36.js"></script><script src="layers/CommunityMakerspaces_37.js"></script><script src="layers/ClothingAccessPoints_38.js"></script><script src="layers/CareerBuildingServices_39.js"></script>
+        <script src="styles/VacantLots_1_style.js"></script><script src="styles/TotalDisabledPopulationNoninstitutionalizedAnydisability_2_style.js"></script><script src="styles/PopulationwCognitiveDisabilityNoninstitutionalized_3_style.js"></script><script src="styles/SNAPCashAssistancePop_4_style.js"></script><script src="styles/PovertyPop_5_style.js"></script><script src="styles/Populationover60_6_style.js"></script><script src="styles/NoVehicleinHouseHold_7_style.js"></script><script src="styles/MedianAge_8_style.js"></script><script src="styles/LOTESpokenatHome_9_style.js"></script><script src="styles/HouseholdsWChildrenUnder18_10_style.js"></script><script src="styles/Employment_11_style.js"></script><script src="styles/BlackPop_12_style.js"></script><script src="styles/RoadsGC_13_style.js"></script><script src="styles/YouthSupport_14_style.js"></script><script src="styles/WaterTestingCenters_15_style.js"></script><script src="styles/SocialandCommunityDevelopmentServices_16_style.js"></script><script src="styles/SmallBusinessNonProfitSupport_17_style.js"></script><script src="styles/SexualandReproductiveHealthCenters_18_style.js"></script><script src="styles/SeniorCenters_19_style.js"></script><script src="styles/RecoveryCenters_20_style.js"></script><script src="styles/MentalHealthServices_21_style.js"></script><script src="styles/IncarcerationSupport_22_style.js"></script><script src="styles/LGBTQSupport_23_style.js"></script><script src="styles/LanguageLiteracyAdultEducationCenters_24_style.js"></script><script src="styles/PastSIPIPartners_25_style.js"></script><script src="styles/SIPIPartners_26_style.js"></script><script src="styles/HousingDevelopmentServices_27_style.js"></script><script src="styles/HomelessnessSupport_28_style.js"></script><script src="styles/HealthIntermediaries_29_style.js"></script><script src="styles/FoodAccessPoints_30_style.js"></script><script src="styles/FamilySupport_31_style.js"></script><script src="styles/Ecosystem_32_style.js"></script><script src="styles/DrugTestingCenters_33_style.js"></script><script src="styles/DomesticAbuseSupport_34_style.js"></script><script src="styles/CulturalCenters_35_style.js"></script><script src="styles/CommunityGardens_36_style.js"></script><script src="styles/CommunityMakerspaces_37_style.js"></script><script src="styles/ClothingAccessPoints_38_style.js"></script><script src="styles/CareerBuildingServices_39_style.js"></script>
+        <script src="./layers/layers.js" type="text/javascript"></script> 
+        <script src="./resources/Autolinker.min.js"></script>
+        <script src="./resources/qgis2web.js"></script>
+    </body>
+</html>
